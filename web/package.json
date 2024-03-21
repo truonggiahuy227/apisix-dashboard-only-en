@@ -21,7 +21,7 @@
     "lint:style": "stylelint --fix \"src/**/*.less\"",
     "prettier": "prettier -c --write \"**/*\"",
     "site": "yarn run fetch:blocks && yarn run build",
-    "start": "yarn copy-folder monaco-editor ./public/ && umi dev",
+    "start": "yarn copy-folder monaco-editor ./public/ && umi dev --openssl-legacy-provider",
     "start:e2e": "cross-env SERVE_ENV=test yarn run start",
     "test:e2e": "start-server-and-test 'cross-env SERVE_ENV=test yarn start' http-get://localhost:8000 cypress:run-ci",
     "test-plugin:e2e": "start-server-and-test 'cross-env SERVE_ENV=test yarn start' http-get://localhost:8000 cypress:run-plugin-ci",
